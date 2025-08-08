@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .//app/data
+      - ./instance:/app/instance
+      - ./plugins:/app/plugins
+    environment:
+      - FLASK_APP=run.py
+      - FLASK_ENV=development
+    command: >
+      sh -c "flask db upgrade && python run.py"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  tests:
+    build: .
+    command: >
+      sh -c "pip install pytest && python -m pytest tests/ -v"
+    volumes:
+      - .:/app
+    depends_on:
+      - backend

@@ -1,0 +1,19 @@
+# instance/config.py.example
+
+SECRET_KEY = 'your-secret-key-here'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///biometric.db'
+ENCRYPTION_KEY = 'thisis32charlongencryptionkey!!!'
+
+# LDAP
+LDAP_SERVER = 'ldap://your-ad-server.com'
+LDAP_DOMAIN = 'COMPANY'
+
+# Email
+ADMIN_EMAIL = 'admin@company.com'
+SMTP_SERVER = 'smtp.gmail.com'
+SMTP_PORT = 587
+SMTP_USER = 'you@gmail.com'
+SMTP_PASS = 'your-app-password'
+
+# Поведенческая биометрия
+BEHAVIORAL_ENABLED = True

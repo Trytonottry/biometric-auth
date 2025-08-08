@@ -1,0 +1,14 @@
+<h2>Register Biometrics</h2>
+<form method="POST">
+  <input type="text" name="username" placeholder="Username" required><br>
+  <select name="role">
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+    <option value="guest">Guest</option>
+  </select><br>
+  <input type="number" name="access_level" min="1" max="5" placeholder="Access Level"><br>
+  <label><input type="checkbox" name="face"> Capture Face</label><br>
+  <label><input type="checkbox" name="fingerprint"> Capture Fingerprint</label><br>
+  <label><input type="checkbox" name="iris"> Capture Iris</label><br>
+  <button type="submit">Register</button>
+</form>

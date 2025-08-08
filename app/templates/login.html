@@ -1,0 +1,9 @@
+<h2>Biometric Login</h2>
+<form method="POST">
+  <input type="text" name="username" placeholder="Username" required><br>
+  <label><input type="checkbox" name="methods" value="face"> Face</label><br>
+  <label><input type="checkbox" name="methods" value="fingerprint"> Fingerprint</label><br>
+  <label><input type="checkbox" name="methods" value="iris"> Iris</label><br>
+  <button type="submit">Authenticate</button>
+</form>
+<a href="{{ url_for('auth.register') }}">Register</a>

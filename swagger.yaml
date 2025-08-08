@@ -1,0 +1,9 @@
+# swagger.yaml
+swagger: '2.0'
+info:
+  title: Biometric Auth API
+  description: Полная документация
+  version: 1.0.0
+host: localhost:5000
+schemes:
+  - http

@@ -1,0 +1,5 @@
+<h2>Welcome, {{ user.username }}!</h2>
+<p>Role: {{ user.role }}</p>
+<p>Access Level: {{ user.access_level }}</p>
+<p>Registered: {{ user.registration_date }}</p>
+<a href="{{ url_for('auth.logout') }}">Logout</a>
